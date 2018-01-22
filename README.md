@@ -71,7 +71,22 @@ namespace OpercionesBasicas
             }
         }
 
-        
+        static void PedirValoresSuma()
+        {
+            double valor1;
+            double valor2;
+            String tipo = "Suma";
+
+            Console.WriteLine("Digite el primer número: ");
+            valor1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Digite el segundo número: ");
+            valor2 = int.Parse(Console.ReadLine());
+
+            Operacion tmpOperacion = new Operacion(tipo, valor1, valor2, 0);
+            Console.WriteLine();
+            Console.WriteLine("Suma: " + miGestor.procesar(tmpOperacion).resultado);
+           
+        }
 
         static void PedirValoresResta()
         {
